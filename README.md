@@ -28,7 +28,7 @@ An end-to-end desktop application for recognizing **6 human activities** from vi
 - **Deep Temporal Learning**: Processes sequential data over a 30-frame sliding window using an LSTM model to capture dynamic motions accurately.
 - **Smart Prediction Smoothing**: Uses a temporal majority-voting filter over the last 5 predictions to eliminate flicker and false-positive spikes.
 - **Confidence Thresholding**: Filters out low-confidence predictions ($\le 50\%$) and labels them as "Uncertain" to prevent false classifications.
-- **Elegant Desktop GUI**: Features a dual-panel layout with custom video skeleton overlays, live probability/confidence bars, and scrolling prediction history.
+- **Elegant Desktop GUI**: Features a dual-panel layout with options for both video file upload and live webcam stream, custom video skeleton overlays, live probability/confidence bars, and scrolling prediction history.
 
 ---
 
@@ -142,8 +142,8 @@ python gui/app_improved.py
 ## 🖥️ GUI Walkthrough
 
 - **📁 Upload Video**: Allows importing `.mp4`, `.avi`, `.mov`, `.mkv` files.
-- **▶ Start Detection**: Runs frame-by-frame pose estimation and displays predictions.
-- **⏸ Stop / Pause**: Pauses video playback and predictions.
+- **📹 Start Webcam**: Activates the live camera feed for real-time activity recognition.
+- **🛑 Stop Detection**: Stops the current video playback or webcam capture stream.
 - **Prediction Log**: Keeps a scrolling record of all predicted events with timestamps.
 - **Status Feed**: Visual confidence bar indicating the model's confidence in its current prediction.
 
